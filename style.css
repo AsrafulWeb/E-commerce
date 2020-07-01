@@ -1,0 +1,765 @@
+*{margin:0; padding:0; outline: none;}
+
+body{
+	font-family:sans-sarif, Arial ;
+	-webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+a{
+	text-decoration:none;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight: normal;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+p{
+	line-height:150%;
+	margin-bottom:2em;
+}
+li{
+	list-style-type:none;
+}
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+html{
+	scroll-behavior: smooth;
+}
+.fix{
+	overflow:hidden;
+}
+.float_left{
+	float:left;
+}
+.float_right{
+	float:right;
+}
+.container_full{
+	width:100%;
+}
+.container{
+	width:1220px;
+	display:block;
+	margin:0 auto;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+/*------------------CSS----------------*/
+/*------cart scroll Bar------*/
+/* width */
+.cartItemsAllSection::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+ 
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+/*------cart scroll Bar------*/
+.header_bg{
+    padding-bottom: 20px;
+    background: rgb(255, 255, 255);
+}
+.container_full .container #header #logo img{
+    width: 110px;
+    padding-right: 20px;
+    margin-top: -17px;
+    float: left;
+}
+#header #serachBar{
+    margin-top: 20px;
+    width: 1084px;
+    float: left;
+}
+#serachBar input{
+    width: 840px;
+    padding: 10px 7px;
+    border: 2px solid #F44336;
+    float: left;
+}
+#serachBar input[type="text"]:focus{
+    background-color: #F5F6F7;
+}
+#serechBtn{
+	background: url('icon/search.png') no-repeat #F44336;
+    width: 90px !important;
+    height: 39px !important;
+    display: inline-block;
+    cursor: pointer;
+    text-indent: -99999999px;
+    background-size: 18px;
+    background-position: center;
+}
+#headerRightSection{
+    color: #E2E8F1;
+    float: right;
+    margin-top: 6px;
+}
+#headerRightSection img{
+    width: 25px;
+    height: auto;
+    margin: -6px 11px;
+    cursor: pointer;
+}
+#headerCartIcon{
+    margin-left: 0px !important;
+}
+.cartItemsNumber{
+    color: #000000;
+    font-size: 20px;
+}
+#headerAllDropdown{
+    
+}
+#headerCartIconsDropdown{
+    position: absolute;
+    top: 45px;
+    left: 985px;
+    z-index: 300;
+    width: 300px;
+    height: 400px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px #aaaaaa;
+    display: none;
+    border-top: 5px solid #000000;
+}
+.headerCartIconsDropdownsHeader{
+    height: 23px;
+    background-color: #E0E0E0;
+    text-align: center;
+    display: block;
+    border-radius: 5px 5px 0 0;
+    padding-top: 7px;
+}
+.headerCartIconsDropdownsEmptyText{
+    margin-top: 300px;
+    text-align: center;
+}
+#headerCartIcon{
+    display: inline !important;
+}
+.headerCartIconsDropdownExtraClass{
+    display: block !important;
+}
+.cartItemsAllSection{
+    height: 335px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.cartProductSection{
+    margin: 10px;
+    padding: 5px;
+    border-radius: 3px;
+    background-color: rgb(255, 253, 164);
+    border-radius: 3px;
+    padding-right: 5px;
+    height: 71px;
+}
+.headerAccountBar{
+    width: 86px;
+    float: right;
+    margin-top: -37px;
+}
+.headerAccountBar img{
+    width: 35px;
+    cursor: pointer;
+}
+.cartProductSection h3{
+    display: inline;
+    font-size: 13px;
+    margin: 0;
+}
+.cartPecLeignth{
+    width: 87px;
+    margin-top: 9px;
+    float: left;
+}
+.cartPPrice{
+    margin-top: 11px;
+    margin-left: 10px;
+    display: block;
+}
+.cartPecLeignth input[type="button"]{
+    padding: 3.5px 7px;
+    border-radius: 3px;
+    border: none;
+    background-color: blueviolet;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+}
+.cartPecLeignth input[value="-"]{
+    padding: 3.5px 9px;
+}
+.cartPecLeignth input[type="number"]{
+    width: 15px;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid #afafaf;
+    padding: 3px;
+}
+.cartProductMainImg{
+    width: 70px;
+    height: auto;
+    float: left;
+    border-radius: 3px;
+    padding-right: 5px;
+}
+.cartProductClose{
+    width: 15px;
+    height: 15px;
+    padding: 4px;
+    background-color: rgb(197, 49, 49);
+    border-radius: 50px;
+    float: right;
+    margin-top: -40px;
+    cursor: pointer;
+}
+.cartTotal{
+    display: block;
+    float: right;
+    margin-right: 30px;
+    margin-top: 0px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.cartTotalTotalText{
+    color: #007f8c;
+}
+.cartTotalTotalAmount{
+    color: #5b5b5b;
+}
+/*---------Header End--------*/
+
+/*---------Menu start--------*/
+.menu_bg{
+    float: left;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 5px #dedede;
+    position: fixed ;
+    top: 79px;
+    left: 0;
+    z-index: 100;
+    border-top: 1px solid #AAAAAA;
+}
+.menu_bg2{
+    margin-top: -79px !important;
+    transition: all .2s;
+}
+#menu ul{
+    margin: 0 50px;
+}
+#menu li{
+    float: left;
+    padding-top: 12px;
+}
+#menu a{
+    color: #474747;
+    padding: 15px 30px;
+    font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", Bangla715, sans-serif;
+    font-size: 14px;
+    transition: all .3s;
+}
+.allMarchent{
+    color: #474747;
+    padding: 15px 30px;
+    font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", Bangla715, sans-serif;
+    font-size: 14px;
+    transition: all .3s;
+    cursor: pointer;
+}
+.allMarchent:hover{
+    color: #919191;
+}
+#menu a:hover{
+    color: #919191;
+}
+.liEvelyExpress a{
+    font-weight: bold;
+    color: #C3232A !important;
+    background: #F4433629;
+    border-radius: 60px;
+    padding: 5px 30px !important;
+}
+.liEvelyExpress a:hover{
+    color: rgb(255, 166, 170) !important;
+}
+#menu #menuRight{
+    padding-bottom: 9px;
+}
+.menu2BtnS {
+    width: 80px;
+    height: 40px;
+    float: left;
+    cursor: pointer;
+}
+.menu2BtnS span{
+    display: block;
+    width: 20px;
+    height: 2px;
+    margin-bottom: 3px;
+    margin-left: 30px;
+    background-color: #5A6577;
+}
+.menu2BtnS span:first-child{
+    margin-top: 15px;
+}
+/*---------menu End---------*/
+/*---------menu2 Start-------*/
+.menu2{
+    position: absolute;
+    top: 0;
+    left: -335px;
+    z-index: 2000;
+    background-color: #FFFFFF;
+    width: 230px;
+    transition: all .4s;
+}
+.left{
+    left: -335px !important;
+}
+
+.menu2Header .menu2HeaderCancel img{
+    width: 25px;
+    height: 25px;
+}
+.menu2Header .menu2HeaderLogo{
+    width: 110px;
+    padding-top: -2px;
+    float: left;
+    padding-right: 20px;
+    cursor: pointer;
+    margin: 20px 30px;
+}
+.menu2Mneu{
+    display: none;
+}
+.menu2Mneu li{
+    padding: 8px;
+}
+.menu2Mneu li:hover a{
+    color: #646464;
+}
+.menu2Mneu li a{
+    padding: 20px !important;
+    color: #4F4F50;
+    transition: all .3s;
+}
+.menu2Contact{
+    margin-left: 20px;
+    color: #000000 !important;
+    display: block;
+    height: 200px;
+}
+.menu2Contact p{
+    margin-bottom: -21px !important;
+    margin-top: 15px;
+}
+.menu2Contact a{
+    color: #464646  !important;
+    font-size: 26px;
+}
+.menu2Contact svg{
+    width: 30px;
+    height: 30px;
+    float: left;
+    padding-right: 10px;
+    padding-top: 12px;
+}
+.menu2Contact div img{
+    width: 30px;
+    height: 30px;
+    float: left;
+    padding-right: 10px;
+    padding-top: 12px;
+}
+.privecySection .assahj{
+    padding-left: 20px;
+}
+.privecySection{
+    padding-left: 20px;
+}
+.privecySection a{
+    color: #9E9E9E;
+}
+.menu2Footer{
+    margin-top: 40px;
+    text-align: center;
+}
+
+/*---------menu2 End---------*/
+/*---------Banner Start---------*/
+.banner_bg{
+    background-color: #F7F8FA;
+}
+#banner{
+    width: 1220px;
+    height: 500px;
+    margin: 0 auto;
+}
+#banner div{
+    width: 1220px;
+    position: absolute;
+    left: 65px;
+    top: 140px;
+    opacity: 0;
+    transition: all 0.3s;
+}
+#banner div img{
+    width: 1220px;
+}
+#banner .active{
+    opacity: 1 !important;
+}
+.chandeAndSelectBtn{
+    width: 90px;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 625px;
+    z-index: 10;
+    margin-top: 525px;
+}
+.chandeAndSelectBtn input{
+    width: 18px;
+    height: 11px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: .6;
+    transition: all .4s;
+}
+.chandeAndSelectBtn input:hover{
+    opacity: 1;
+}
+.ButtonActive{
+    opacity: 1 !important;
+}
+.carossalLeftRightBtn img{
+    position: absolute;
+    width: 50px;
+    background: #eaeaeab3;
+    top: 326px;
+    cursor: pointer;
+    padding: 12px 0;
+    transition: all .4s;
+}
+.carossalLeftBtn{
+    border-radius: 0 5px 5px 0;
+}
+.carossalRightBtn{
+    border-radius: 5px 0 0 5px;
+    left: 1235px;
+}
+.carossalLeftRightBtn img:hover{
+    background: #eaeaeaf0 !important;
+}
+/*---------Banner Start---------*/
+/*---------Banner2 Start---------*/
+#banner2 a{
+    width: 30%;
+    height: 416px;
+    margin-right: 56px;
+}
+#banner2 a img{
+    width: 30%;
+    height: auto;
+    margin-top: 20px;
+}
+#banner2 .banner2s3,.banner2s6{
+    margin: 0 !important;
+}
+.menu2Mneu{
+    margin-top: 10px;
+    width: 235px;
+    position: fixed;
+    z-index: 20000;
+    background: #ffffff;
+    left: 50px;
+    padding-bottom: 20px;
+    padding-top: 0 !important;
+}
+.menu2Menu2{
+    top: 34px !important;;
+}
+.banner2_bg{
+    padding: 40px 0;
+    background-color: #F7F8FA;
+    padding-top: 0px;
+}
+.menu2 li a{
+    padding: 20px;
+}
+
+
+/*---------Banner2 End---------*/
+/*---------product Start---------*/
+.categoriesBrandAndShop_bg{
+    background-color: #F7F8FA;
+}
+#categoriesBrandAndShop .categoriesBrandAndShopMenu{
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 25px 0;
+    margin-bottom: 20px;
+    padding-bottom: 26px;
+}
+#categoriesBrandAndShop .categoriesBrandAndShopMenu span{
+    width: 30%;
+    padding: 25px 165px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #000000;
+}
+#categoriesBrandAndShop .categoriesBrandAndShopMenu span:first-child{
+    margin-left: 17px;
+}
+#categoriesBrandAndShop p{
+    color: #383E46;
+    font-size: 14px;
+}
+#categoriesBrandAndShop .categoriesBrandAndShopMenu span:last-child{
+    margin-right: 17px;
+}
+#categoriesBrandAndShop section div a div{
+    width: 165px;
+    float: left;
+    background-color: #ffffff;
+    margin-right: 10.8px;
+    text-align: center;
+    border-radius: 6px;
+    box-shadow: 0px 0px 15px #e2e2e2;
+    margin-bottom: 30px;
+}
+#categoriesBrandAndShop section div a .categoriesSection_last{
+    margin-right: 0px;
+}
+#categoriesBrandAndShop section div a div img{
+    width: 100%;
+    margin: 0 0px;
+}
+.categoriesc{
+    border-bottom: 2px solid #000000 !important;
+}
+.brandss{
+    border-bottom: 2px solid #000000 !important;
+}
+.shopss{
+    border-bottom: 2px solid #000000 !important;
+}
+
+/*---------product End---------*/
+/*---------Product Bottom Start---------*/
+.productAllSection_bg{
+    background-color: #F7F8FA;
+    padding-bottom: 20px;
+}
+#productAllSectionHeader{
+    display: block;
+    width: 100%;
+    height: 60px;
+}
+#productAllSectionAll{
+    margin-bottom: 40px;
+}
+#productAllSectionHeader h2{
+    float: left;
+    margin: 0;
+}
+#productAllSectionHeader form{
+    float: right;
+    display: inline;
+}
+#productAllSectionHeader form input[type="text"]{
+    padding: 13px 20px;
+    border-radius: 6px 0 0 6px;
+    border: 1px solid #E7ECEF;
+}
+#productAllSectionHeader form input[type="button"]{
+    width: 75px;
+    height: 43px !important;
+    text-indent: -99999px;
+    border: none;
+    margin-bottom: -17px;
+    margin-left: -5px;
+    background: url("icon/search.png") no-repeat rgba(0,0,0,1);
+    border-radius: 0 6px 6px 0;
+    background-position: center;
+    background-size: 20px;
+}
+#productAllSectionHeader form a{
+    border: none;
+    padding: 12px 25px;
+    outline: none;
+    font-weight: bold;
+    background-color: #C3232A;
+    color: #ffffff;
+    margin-left: 10px;
+    border-radius: 6px;
+}
+.productAllSectionDiv{
+    width: 180px;
+    float: left;
+    margin-right: 23px;
+    background-color: #ffffff;
+    text-align: center;
+    border-radius: 5px;
+    transition: all .5s;
+    margin-bottom: 20px;
+}
+.productAllSectionDiv6{
+    margin-right: 0px;
+}
+.productAllSectionDiv1{
+    margin-left: 13px
+}
+.productAllSectionDiv img{
+    width: 180px;
+    height: 180px;
+    padding: 10px 0;
+    transition: all 0.4s;
+    border-radius: 3px;
+}
+.productAllSectionDiv a{
+    color: #45B3FB;
+    padding: 0 10px;
+    cursor: pointer;
+    display: block;
+    transition: all .3s;
+}
+.productAllSectionDiv a:hover{
+    color: #81CDFF;
+}
+.productAllSectionDiv .productPrice{
+    color: #323e46;
+    font-weight: bold;
+}
+.productAllSectionDiv:hover{
+    box-shadow: 0 0 15px #cacaca;
+}
+.viewAllDiv{
+    height: 60px;
+}
+.viewAll{
+    background: #F44336;
+    padding: 15px 25px;
+    color: #fff;
+    float: right;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: all .2s;
+}
+.viewAll:hover{
+    box-shadow: 0 0 10px #a6a6a6;
+}
+#addToCartBtn{
+    color: #F44336;
+    margin-top: 15px;
+    display: block;
+    border-top: 1px solid #dbdbdb;
+    padding: 13px;
+    cursor: pointer;
+    font-weight: lighter;
+}
+/*---------Product Bottom End---------*/
+/* ------Product Page------ */
+.product_bg{
+    background-color: #F7F8FA;
+}
+.productPageProductImgDiv{
+    float: left;
+    width: 55%;
+    height: auto;
+}
+.descriptionAndSpecification{
+    float: right;
+    width: 45%;
+    height: auto;
+}
+.productPageProductImgDivImg{
+    width: 400px;
+    height: auto;
+}
+.productPageProductImgDivImgsList{
+    text-align: center;
+}
+.productPageProductImgDivImgsList img{
+    width: 100px;
+    height: auto;
+    border-radius: 3px;
+    border: 1px solid #e0e0e0;
+}
+#productPageMain{
+    margin-top: 80px;
+    
+}
+#productPageMain aside{
+    background-color: #ffffff;
+}
+#productPageMain .productAsideLeft{
+    width: 65%;
+    border-radius: 5px;
+    float: left;
+    padding: 17px;
+}
+#productPageMain .productAsideRight{
+    width: 31%;
+    border-radius: 5px;
+    float: right;
+}
+.kitchen_and_dining_product img{
+    width: 162px !important;
+    border-radius: 4px !important;
+}
+
+
+/* ------Product Page------ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
